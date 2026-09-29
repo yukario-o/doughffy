@@ -1,0 +1,357 @@
+/* =========================================
+   DOUGHFFY STOCK MANAGER
+   ADMIN STYLES
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff8f3;
+    color: #4b3030;
+}
+
+
+/* =========================================
+   LOGIN SCREEN
+========================================= */
+
+.login-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 40px 35px;
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(80, 45, 30, 0.12);
+    text-align: center;
+}
+
+.login-logo {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #8b4f4f;
+}
+
+.login-subtitle {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: #9a7777;
+}
+
+
+.login-card form {
+    text-align: left;
+}
+
+.login-card label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #634444;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #e3ceca;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    background: #fffafa;
+}
+
+.login-card input:focus {
+    border-color: #c98686;
+}
+
+
+.login-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #a96565;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-button:hover {
+    background: #8f5151;
+}
+
+.error-message {
+    min-height: 20px;
+    margin-top: 12px;
+    color: #c0392b;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ADMIN PANEL
+========================================= */
+
+.admin-panel {
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-header {
+    background: white;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 12px rgba(80, 45, 30, 0.08);
+}
+
+.admin-header h1 {
+    margin: 0;
+    color: #8b4f4f;
+    font-size: 28px;
+}
+
+.admin-header p {
+    margin: 6px 0 0;
+    color: #9a7777;
+}
+
+
+.logout-button {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 10px;
+    background: #f0dddd;
+    color: #754444;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #e7caca;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.stock-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto 60px;
+}
+
+
+/* =========================================
+   SAVE MESSAGE
+========================================= */
+
+.save-message {
+    min-height: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #548454;
+}
+
+
+/* =========================================
+   STOCK SECTIONS
+========================================= */
+
+.stock-section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(80, 45, 30, 0.08);
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #704545;
+    font-size: 21px;
+}
+
+.section-header p {
+    margin: 5px 0 0;
+    color: #9a7777;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   STOCK ITEMS
+========================================= */
+
+.stock-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stock-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 16px;
+    background: #fff8f6;
+    border: 1px solid #f0dfda;
+    border-radius: 13px;
+}
+
+.stock-name {
+    font-weight: bold;
+    color: #5b3b3b;
+}
+
+
+/* =========================================
+   STOCK STATUS
+========================================= */
+
+.stock-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-text {
+    min-width: 105px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   TOGGLE SWITCH
+========================================= */
+
+.stock-toggle {
+    position: relative;
+    width: 52px;
+    height: 28px;
+}
+
+.stock-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: #d6cccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.2s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stock-toggle input:checked + .toggle-slider {
+    background: #75a875;
+}
+
+.stock-toggle input:checked + .toggle-slider::before {
+    transform: translateX(24px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .login-card {
+        padding: 30px 22px;
+    }
+
+    .admin-header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .admin-header h1 {
+        font-size: 23px;
+    }
+
+    .logout-button {
+        width: 100%;
+    }
+
+    .stock-container {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .stock-section {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .stock-item {
+        padding: 13px;
+    }
+
+    .stock-name {
+        font-size: 14px;
+    }
+
+    .status-text {
+        min-width: 90px;
+        font-size: 11px;
+    }
+}

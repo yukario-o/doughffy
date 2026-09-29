@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doughffy Stock Manager</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LOGIN SCREEN
+    ========================== -->
+
+    <div id="loginScreen" class="login-screen">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                🍩
+            </div>
+
+            <h1>Doughffy</h1>
+
+            <p class="login-subtitle">
+                Stock Manager
+            </p>
+
+            <form id="loginForm">
+
+                <label for="loginEmail">
+                    Admin Email
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit" class="login-button">
+                    Login
+                </button>
+
+                <p id="loginError" class="error-message"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         ADMIN PANEL
+    ========================== -->
+
+    <div id="adminPanel" class="admin-panel hidden">
+
+        <header class="admin-header">
+
+            <div>
+                <h1>🍩 Doughffy Stock Manager</h1>
+
+                <p>
+                    Manage the availability of your ingredients and flavors.
+                </p>
+            </div>
+
+            <button id="logoutButton" class="logout-button">
+                Log Out
+            </button>
+
+        </header>
+
+
+        <main class="stock-container">
+
+            <div id="saveMessage" class="save-message"></div>
+
+
+            <!-- =========================
+                 FIXED FLAVORS
+            ========================== -->
+
+            <section class="stock-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>🍩 Fixed Flavors</h2>
+
+                        <p>
+                            Turn flavors on or off depending on availability.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    id="fixedFlavorsList"
+                    class="stock-list"
+                ></div>
+
+            </section>
+
+
+            <!-- =========================
+                 FROSTINGS
+            ========================== -->
+
+            <section class="stock-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>🍓 Frostings</h2>
+
+                        <p>
+                            Manage your available frosting flavors.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    id="frostingsList"
+                    class="stock-list"
+                ></div>
+
+            </section>
+
+
+            <!-- =========================
+                 DRIZZLES
+            ========================== -->
+
+            <section class="stock-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>🍫 Drizzles</h2>
+
+                        <p>
+                            Manage your drizzle flavors.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    id="drizzlesList"
+                    class="stock-list"
+                ></div>
+
+            </section>
+
+
+            <!-- =========================
+                 TOPPINGS
+            ========================== -->
+
+            <section class="stock-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>✨ Toppings</h2>
+
+                        <p>
+                            Manage your donut toppings.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    id="toppingsList"
+                    class="stock-list"
+                ></div>
+
+            </section>
+
+
+            <!-- =========================
+                 POWDERS
+            ========================== -->
+
+            <section class="stock-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>🍵 Powders</h2>
+
+                        <p>
+                            Manage your powdered toppings.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    id="powdersList"
+                    class="stock-list"
+                ></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Firebase / Stock Manager -->
+    <script type="module" src="admin.js"></script>
+
+</body>
+</html>

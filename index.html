@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doughffy — Mini Donuts Made with Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+    <section id="welcomeScreen" class="screen active">
+        <div class="card welcome-card">
+            <img src="spatzihappy.png" alt="Spatzi" class="spatzi-image">
+            <h2>Hi! I'm Spatzi! 🍩</h2>
+            <p>Welcome to Doughffy!<br>Ready to have some delicious mini donuts?</p>
+            <div class="button-group">
+                <button id="yesButton" class="primary-button" type="button">🍩 Take My Order</button>
+                <button id="menuButton" class="secondary-button" type="button">📋 View Menu &amp; Prices</button>
+                <button id="noButton" class="text-button" type="button">Not today</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="notTodayScreen" class="screen">
+        <div class="card">
+            <img src="spatziteary.png" alt="Spatzi" class="spatzi-image">
+            <h2>That's okay! 🥺</h2>
+            <p>I'll be here whenever you're craving some Doughffy!</p>
+            <button class="primary-button" type="button" data-screen="welcomeScreen">Back to Home</button>
+        </div>
+    </section>
+
+    <section id="menuScreen" class="screen">
+        <div class="card wide-card">
+            <h1>🍩 Doughffy Menu</h1>
+            <p class="subtitle">Mini donuts made with love!</p>
+
+            <div class="menu-section">
+                <h2>Box Prices</h2>
+                <div class="price-grid">
+                    <div class="price-card"><strong>6 Donuts</strong><span>₱90</span></div>
+                    <div class="price-card"><strong>12 Donuts</strong><span>₱170</span></div>
+                    <div class="price-card"><strong>18 Donuts</strong><span>₱230</span></div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2>✨ Fixed Flavors</h2>
+                <div class="flavor-menu">
+                    <div class="flavor-card"><h3>Strawberry Cloud</h3><p>Strawberry Frosting, white chocolate drizzle, marshmallow</p></div>
+                    <div class="flavor-card"><h3>Choco zag</h3><p>Chocolate Frosting, white chocolate drizzle</p></div>
+                    <div class="flavor-card"><h3>Ube snow</h3><p>Ube Frosting, Powdered Sugar</p></div>
+                    <div class="flavor-card"><h3>Matcha Polkadot</h3><p>Matcha Frosting, White Chocolate / Chocolate Chip</p></div>
+                    <div class="flavor-card"><h3>Oreo Doughffy</h3><p>White Frosting, crushed Oreo</p></div>
+                    <div class="flavor-card"><h3>Confetti Ring</h3><p>White Chocolate Frosting, Rainbow Sprinkle</p></div>
+                    <div class="flavor-card"><h3>Biscoff Dream</h3><p>Biscoff Frosting, Crushed Biscoff</p></div>
+                    <div class="flavor-card"><h3>Caramel Pretzel</h3><p>Caramel Frosting, Pretzel</p></div>
+                    <div class="flavor-card"><h3>Cinnamon Doughffy</h3><p>Just Cinnamon Sugar</p></div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2>💰 Premium Add-ons</h2>
+                <div class="premium-list">
+                    <p><strong>Premium Frosting +₱7</strong><br>Caramel • Coffee • Matcha • Biscoff</p>
+                    <p><strong>Premium Drizzle +₱2</strong><br>Caramel • Coffee • Matcha</p>
+                    <p><strong>Premium Toppings +₱5</strong><br>Oreo • Biscoff Cookies • Graham Crackers • Pretzels • Peanuts</p>
+                    <p><strong>Premium Powder +₱5</strong><br>Matcha Powder</p>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <strong>Free options are available!</strong>
+                <p>You can choose up to two toppings. A second premium topping also adds ₱5.</p>
+            </div>
+
+            <div class="button-group">
+                <button id="menuOrderButton" class="primary-button" type="button">🍩 Order Now</button>
+                <button id="menuBackButton" class="secondary-button" type="button">← Back</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="styleScreen" class="screen">
+        <div class="card">
+            <img src="spatziconversation.png" alt="Spatzi" class="spatzi-image small">
+            <h1>How would you like your donuts?</h1>
+            <p class="subtitle">Choose your Doughffy style! 🍩</p>
+            <div class="choice-grid">
+                <button id="mixButton" class="choice-card" type="button">
+                    <span class="choice-icon">🎨</span><strong>Mix &amp; Match</strong><small>Customize every donut individually</small>
+                </button>
+                <button id="singleButton" class="choice-card" type="button">
+                    <span class="choice-icon">📦</span><strong>One Box</strong><small>Choose fixed flavors or create your own</small>
+                </button>
+            </div>
+            <button id="goBackButton" class="secondary-button" type="button">← Back</button>
+        </div>
+    </section>
+
+    <section id="mixSizeScreen" class="screen">
+        <div class="card">
+            <h1>Choose Your Box 📦</h1>
+            <p class="subtitle">How many mini donuts would you like?</p>
+            <div class="size-grid">
+                <button class="mix-size-button size-card" data-size="6" type="button"><strong>6</strong><span>Donuts</span><small>₱90</small></button>
+                <button class="mix-size-button size-card" data-size="12" type="button"><strong>12</strong><span>Donuts</span><small>₱170</small></button>
+                <button class="mix-size-button size-card" data-size="18" type="button"><strong>18</strong><span>Donuts</span><small>₱230</small></button>
+            </div>
+            <button class="secondary-button" type="button" data-screen="styleScreen">← Back</button>
+        </div>
+    </section>
+
+    <section id="builderScreen" class="screen">
+        <div class="card wide-card">
+            <h1>🎨 Mix &amp; Match</h1>
+            <p class="subtitle">Customize every donut exactly how you want it!</p>
+            <div class="progress-box"><strong id="mixProgressText">0/0 Customized</strong><div class="progress-track"><div id="mixProgressFill" class="progress-fill"></div></div></div>
+            <div id="individualCustomizationBox"></div>
+            <div class="total-preview">Total: <strong id="mixPricePreview">₱0</strong></div>
+            <button id="mixContinueButton" class="primary-button" type="button" disabled>Continue →</button>
+            <button class="secondary-button" type="button" data-screen="mixSizeScreen">← Back</button>
+        </div>
+    </section>
+
+    <section id="singleFlavorScreen" class="screen">
+        <div class="card wide-card">
+            <h1>📦 One Box</h1>
+            <p class="subtitle">Choose fixed flavors or customize your own.</p>
+
+            <div id="byBoxModeArea" class="box-mode-area">
+                <h2>How would you like your box?</h2>
+                <div class="choice-grid">
+                    <button class="choice-card box-mode-button" data-box-mode="fixed" type="button"><span class="choice-icon">✨</span><strong>Fixed Flavors</strong><small>Pick from Doughffy's ready-made flavors</small></button>
+                    <button class="choice-card box-mode-button" data-box-mode="custom" type="button"><span class="choice-icon">🎨</span><strong>Customize Your Own</strong><small>Create your own flavor combinations</small></button>
+                </div>
+            </div>
+
+            <div id="byBoxSizeArea" class="builder-area" style="display:none">
+                <h2>📦 Choose Your Box</h2>
+                <div class="size-grid">
+                    <button class="box-size-button size-card" data-size="6" type="button"><strong>6</strong><span>Donuts</span><small>₱90</small></button>
+                    <button class="box-size-button size-card" data-size="12" type="button"><strong>12</strong><span>Donuts</span><small>₱170</small></button>
+                    <button class="box-size-button size-card" data-size="18" type="button"><strong>18</strong><span>Donuts</span><small>₱230</small></button>
+                </div>
+            </div>
+
+            <div id="fixedFlavorArea" class="builder-area" style="display:none">
+                <h2>✨ Choose Your Flavors</h2>
+                <p class="instruction">Each flavor group contains 6 donuts. Out-of-stock flavors cannot be selected.</p>
+                <div id="fixedFlavorSelectors" class="option-stack"></div>
+                <button id="fixedFlavorContinueButton" class="primary-button" type="button">Continue →</button>
+                <button class="secondary-button" type="button" data-action="back-to-box-size">← Back</button>
+            </div>
+
+            <div id="customBoxArea" class="builder-area" style="display:none">
+                <h2>🎨 Customize Your Box</h2>
+                <p class="instruction">Complete every required field in each 6-donut group. Second Topping is optional.</p>
+                <div id="customBoxProgressText" class="custom-progress-text">0/0 Customized</div>
+                <div id="customBoxGroups" class="custom-box-groups"></div>
+                <div id="customBoxPricePreview" class="total-preview">Total: ₱0</div>
+                <button id="customBoxContinueButton" class="primary-button" type="button" disabled>Continue →</button>
+                <button class="secondary-button" type="button" data-action="back-to-box-size">← Back</button>
+            </div>
+
+            <button id="singleFlavorBackButton" class="secondary-button" type="button" data-screen="styleScreen">← Back to choices</button>
+        </div>
+    </section>
+
+    <section id="orderScreen" class="screen">
+        <div class="card wide-card">
+            <h1>📝 Your Details</h1>
+            <p class="subtitle">Almost there! Tell us where to send your Doughffy.</p>
+
+            <div class="order-summary-box"><h2>Your Order</h2><div id="orderSummary"></div><div class="summary-total"><span>Total</span><strong id="orderTotal">₱0</strong></div></div>
+
+            <div class="form-section">
+                <h2>Customer Information</h2>
+                <div class="form-group"><label for="customerName">Name</label><input id="customerName" type="text" placeholder="Your name" autocomplete="name"></div>
+                <div class="form-group"><label for="contactNumber">Contact Number</label><input id="contactNumber" type="tel" placeholder="09XXXXXXXXX" autocomplete="tel"></div>
+
+                <div class="form-group"><label for="fulfillment">Fulfillment</label><select id="fulfillment"><option value="">Select one</option><option value="Delivery">🚚 Delivery</option><option value="Pickup">📍 Pickup</option></select></div>
+
+                <div id="deliveryFields" class="fulfillment-box" style="display:none">
+                    <h3>🚚 Delivery Details</h3>
+                    <p class="small-note">Delivery fee will be confirmed based on location.</p>
+                    <div class="form-group"><label for="deliveryAddress">Delivery Address</label><textarea id="deliveryAddress" rows="3" placeholder="Complete delivery address"></textarea></div>
+                </div>
+
+                <div id="pickupFields" class="fulfillment-box" style="display:none">
+                    <h3>📍 Pickup Details</h3>
+                    <p class="small-note">Area 1: Mon–Thu, 7–8 AM or 5–7 PM. Area 2: Fri–Sun, 1–8 PM.</p>
+                    <div class="form-group"><label for="pickupArea">Pickup Area</label><select id="pickupArea"><option value="">Select Area</option><option value="Area 1">Area 1 — Mon–Thu</option><option value="Area 2">Area 2 — Fri–Sun</option></select></div>
+                    <div class="form-group"><label for="pickupLocation">Pickup Location</label><select id="pickupLocation"><option value="">Select Pickup Location</option></select></div>
+                    <div class="form-group"><label for="pickupDate">Pickup Date</label><input id="pickupDate" type="date"><small id="pickupDateNote" class="small-note">Choose a date that matches your area's schedule.</small></div>
+                    <div class="form-group"><label for="pickupTime">Pickup Time</label><select id="pickupTime"><option value="">Select Time</option></select></div>
+                </div>
+
+                <div class="form-group"><label for="notes">Notes</label><textarea id="notes" rows="3" placeholder="Any special notes? (Optional)"></textarea></div>
+            </div>
+
+            <div class="no-payment-note">💗 <strong>No payment is required through the website.</strong><br>Payment details will be discussed separately.</div>
+            <button id="submitOrder" class="primary-button submit-button" type="button">🍩 Place My Order</button>
+            <button class="secondary-button" type="button" data-screen="singleFlavorScreen">← Back</button>
+        </div>
+    </section>
+
+    <section id="confirmationScreen" class="screen">
+        <div class="card confirmation-card">
+            <img src="spatzihappy.png" alt="Happy Spatzi" class="spatzi-image">
+            <div class="success-icon">✓</div>
+            <h1>Order Received! 🍩💗</h1>
+            <p class="subtitle">Thank you for ordering from Doughffy!</p>
+            <div class="order-number-box"><span>Order Number</span><strong id="orderNumber">DF-000000</strong></div>
+            <div id="confirmationDetails" class="confirmation-details"></div>
+            <div class="final-total-box"><span>Total</span><strong id="finalTotal">₱0</strong></div>
+            <div class="confirmation-note">📸 Please take a screenshot of this page and send it to Doughffy through Facebook if needed.</div>
+            <div class="button-group">
+                <button id="facebookButton" class="primary-button" type="button">💬 Send Screenshot on Facebook</button>
+                <button id="anotherOrderButton" class="secondary-button" type="button">🍩 Place Another Order</button>
+                <button id="homeButton" class="text-button" type="button">Back to Home</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+<script type="module" src="stock.js"></script>
+</body>
+</html>
